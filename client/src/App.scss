@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#btm-call {
+	padding: 50px;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+}
+
+@media(max-width: 700px) {
+	#btm-call {
+		font-size: 20px;
+	}
+}
