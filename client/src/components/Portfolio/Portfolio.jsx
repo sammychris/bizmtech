@@ -4,7 +4,7 @@ function Portfolio() {
 	return (
 		<section id="portfolio">
 			<header>
-				<h2>This is how I can help you get more customers/clients</h2>
+				<h2>These are some of my works</h2>
 			</header>
 			<ul>
 				<li class="project-tile">
