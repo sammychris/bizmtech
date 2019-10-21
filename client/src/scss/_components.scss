@@ -1,0 +1,36 @@
+#header {
+	background: $tab-bgcolor;
+	color: $tab-color;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	#navbar {
+		width: $page-width;
+		max-width: $max-page-width;
+		height: $fix-header-height;
+		margin: auto;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			width: 400px;
+			list-style: none;
+
+			li {
+				a {
+					text-decoration: none;
+					color: $tab-color;
+				}
+			}
+		}
+	}
+}
+
+#footer {
+
+}
