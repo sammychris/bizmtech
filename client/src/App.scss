@@ -6,15 +6,6 @@ body {
   margin: 0;
 }
 
-#btm-call {
-	padding: 50px;
-	font-weight: bold;
-	font-size: 30px;
-	text-align: center;
-}
-
-@media(max-width: 700px) {
-	#btm-call {
-		font-size: 20px;
-	}
-}
+@import 'scss/base';
+@import 'scss/layout';
+@import 'scss/components';
