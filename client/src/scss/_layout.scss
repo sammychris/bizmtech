@@ -1,7 +1,22 @@
 #main {
 
 	#welcome-banner {
-		background-image: url('/images/banner.jpg');
+		margin-top: 10vh;
+		background-image: url('/images/banner2.jpg');
+		background-repeat: no-repeat;
+		background-size: contain;
+    	height: 100vh;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+
+    	h1 {
+    		font-family: sans-serif;
+    		background: rgba(0, 0, 0, 0.9);
+    		padding: 20px;
+    		color:  rgba(255, 165, 0, 0.79);
+
+    	}
 	}
 
 	.blog {}
