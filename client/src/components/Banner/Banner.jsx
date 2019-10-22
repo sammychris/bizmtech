@@ -4,8 +4,7 @@ function Banner() {
 	return (
 		<section id="welcome-banner">
 		  	<div>
-		  		<h1>Hey i'am Samuel</h1>
-		    	<p>a web developer</p>
+		  		<h1>We can help you get more customers and clients</h1>
 		  	</div>
 	  	</section>
 	);
