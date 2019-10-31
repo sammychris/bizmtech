@@ -1,0 +1,56 @@
+app.post('/api/sendmail', (req, res) => {
+		//////  Data, Subject, Body,
+		const { data, subject, body, startTime, now, daily } = req.body;
+		let begin = Number(startTime);
+		if(now) begin = 100;
+		
+		const getStarted = (enterData, first) => {
+			let currentItem = 1; // current item index
+			const mailsPerMin = divideArr(enterData, Math.ceil(enterData.length/4)); // number of mails sent per minute divide by 4
+			const mailLength = mailsPerMin.length;
+			let message = (mailLength > 1) ?
+				`Started sending. This will take ${mailLength}mins! to complete`:
+				`Message Sent!`;
+
+			// sendMails({ data: mailsPerMin[0], subject, body}, (err, result) => {
+			// 	if (err) return res.json({ message: '!could not send'});
+			// 	if (first) return res.json({ message });
+			// 	else channel.publish({ message }, 'myEvent');
+			// })
+
+			if (mailLength > 1){ // checking if it contains more than one list of items.
+				const timer = setInterval(() => {
+					sendMails({ data: mailsPerMin[currentItem], subject, body}, (err, result) => {
+						if (err) {
+							clearInterval(timer);
+							return channel.publish({ message: '!could not send'}, 'myEvent');
+						}
+						if (!mailsPerMin[currentItem + 1]) { // if this is the Last item
+							clearInterval(timer);
+							console.log('Message Sent Completed!')
+							return channel.publish({ message: `Completed Today's Messages!`}, 'myEvent');
+						}
+						currentItem++;
+					})
+				}, 60 * 1000); // mails sent in 1 minute.
+			}
+		}
+
+		setTimeout(() => {
+			const mailsPerDay = divideArr(data, Number(daily)); // number of mails per day: depends on the user..
+			trackItem = 1; // current item index
+
+			getStarted(mailsPerDay[0], true);
+
+			const scheduler = setInterval(() => {
+				if (!mailsPerDay[trackItem]) {
+					clearInterval(scheduler);
+					return channel.publish({ message: 'All Messages has been completed!' });
+				}
+				// getStarted(mailsPerDay[trackItem]);
+				trackItem++;
+
+			}, 24 * (60 * (60 * 1000)));  // 24hrs 
+		}, begin);  // setting the time according to the user
+
+	})
