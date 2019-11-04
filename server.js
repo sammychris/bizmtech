@@ -17,7 +17,7 @@ if (isProduction) app.use(express.static('build'));
 
 
 // import your route
-//require('./route/api')(app);
+require('./route/api')(app);
 
 
 //serving all js data
