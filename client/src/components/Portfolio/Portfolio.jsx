@@ -4,31 +4,37 @@ function Portfolio() {
 	return (
 		<section id="portfolio">
 			<header>
-				<h2>These are some of my works</h2>
+				<h2>These are some of our works</h2>
 			</header>
 			<ul>
 				<li class="project-tile">
-					<a href="https://codepen.io/SammyChris/pen/drdwdJ">
-						<img src="https://i.postimg.cc/nV7424wx/Capture.jpg" alt="" />
-						<p>Product Landing Page</p>
+					<a href="http://jakazautoparts.com" target="_blank" alt="">
+						<img src='images/jakazpics.png'/>
 					</a>
 				</li>
 				<li class="project-tile">
-					<a href="https://codepen.io/SammyChris/full/RdQVQw">
-						<img src="https://i.postimg.cc/cCbGrqyq/Capture2.jpg" alt="" />
-						<p>Survey Form</p>
+					<a href="https://chingu-habit-tracker.herokuapp.com" target="_blank" alt="">
+						<img src="images/habit.png" alt="" />
 					</a>
 				</li>
 				<li class="project-tile">
-					<a href="https://codepen.io/SammyChris/full/wOyYEz">
-						<img src="https://i.postimg.cc/jjPfcKZX/Capture3.jpg" alt="" />
-						<p>Tribute Page</p>
+					<a href="https://sammychris.github.io/" target="_blank" alt="">
+						<img src="images/portfolio.png" alt="" />
 					</a>
 				</li>
 				<li class="project-tile">
-					<a href="https://codepen.io/SammyChris/full/JzLbyZ">
-						<img src="https://i.postimg.cc/3rvwD9fX/Capture4.jpg" alt="" />
-						<p>Javascript Documentation Page</p>
+					<a href="https://sammychris.github.io/Product-Landing-Page" target="_blank" alt="">
+						<img src="images/productLand.png" alt="" />
+					</a>
+				</li>
+				<li class="project-tile">
+					<a href="https://sammychris-metric-imperial-converter.glitch.me/" target="_blank" alt="">
+						<img src="images/project.jpg" alt="" />
+					</a>
+				</li>
+				<li class="project-tile">
+					<a href="#" target="_blank" alt="">
+						<img src="images/maintenance.jpg" alt="" />
 					</a>
 				</li>
 			</ul>
